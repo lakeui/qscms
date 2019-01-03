@@ -19,9 +19,9 @@ return [
     // 应用地址
     'app_host'               => '',
     // 应用调试模式
-    'app_debug'              => false,
+    'app_debug'              => \Env::get('app_debug'),
     // 应用Trace
-    'app_trace'              => false,
+    'app_trace'              => \Env::get('app_trace'),
     // 是否支持多模块
     'app_multi_module'       => true,
     // 入口自动绑定模块
@@ -54,7 +54,7 @@ return [
     // +----------------------------------------------------------------------
 
     // 默认模块名
-    'default_module'         => 'index',
+    'default_module'         => 'home',
     // 禁止访问模块
     'deny_module_list'       => ['common'],
     // 默认控制器名
